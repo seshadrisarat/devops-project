@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devops-app-srvc
+  name: devops-app-srvc  
+spec:
+  selector:
+    matchLabels:
+      app: devops-app-srvc
+  template:
+    metadata:
+      labels:
+        app: devops-app-srvc
+    spec:
+      containers:
+      - name: devops-app-srvc
+        image: gcr.io/devops-project-253916/apr-server:vVERSION_NUMBER
